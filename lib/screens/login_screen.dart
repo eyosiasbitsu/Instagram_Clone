@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/screens/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget{
   const LoginScreen({super.key});
@@ -44,15 +43,9 @@ class LoginScreen extends StatelessWidget{
             // Here is the login Button
             ElevatedButton(
               onPressed: (){
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => SignUpScreen(),
-                    )
-                );
+                Navigator.pushReplacementNamed(context, '/home');
                 // TODO: Implement the login button functionality
               },
-
               child: const Text("Log In"),
             ),
 
