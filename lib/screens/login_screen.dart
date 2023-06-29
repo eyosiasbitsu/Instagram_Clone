@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget{
   const LoginScreen({super.key});
@@ -39,12 +40,51 @@ class LoginScreen extends StatelessWidget{
             ),
 
             const SizedBox(height: 10.0,),
+
+            // Here is the login Button
             ElevatedButton(
               onPressed: (){
-                // TODO: Implement the login button functionality 
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => SignUpScreen(),
+                    )
+                );
+                // TODO: Implement the login button functionality
               },
-              child: const Text('Log In'),
+
+              child: const Text("Log In"),
+            ),
+
+            // Here is the forgot password button
+            TextButton(
+              onPressed: () {
+                // TODO: Implement the "Forgot password?" functionality
+              },
+
+              child: const Text('Forgot Password?'),
+            ),
+
+            const Row(
+              children: [
+                Expanded(child: Divider()),
+
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Text('OR'),
+                ),
+                Expanded(child: Divider()),
+              ],
+            ),
+
+            ElevatedButton.icon(
+              onPressed: (){
+                // TODO: Implement the "Login with facebook" functionality
+              }, 
+              icon: Icon(Icons.facebook), 
+              label: Text('Log in with Facebook')
             )
+
             // TODO: Implement the rest of the login screen UI here
           ],
         ),
