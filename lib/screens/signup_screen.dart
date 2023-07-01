@@ -61,7 +61,7 @@ class SignUpScreen extends StatelessWidget{
             const SizedBox(height: 20,),
             ElevatedButton(
               onPressed: (){
-                Navigator.pushReplacementNamed(context, '/home');
+                Navigator.pushReplacementNamed(context, '/feed');
                 // TODO: Implement the signup button functionality
               },
               style: ElevatedButton.styleFrom(
