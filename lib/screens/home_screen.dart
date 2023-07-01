@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/screens/post_item.dart';
@@ -11,8 +10,9 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF262626),
         title: const Text('Instagram'),
-      ),
+        ),
 
       body: Container(
         padding: const EdgeInsets.all(16.0),
